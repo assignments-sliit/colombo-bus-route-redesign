@@ -12,15 +12,32 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 export class AppComponent {
   public appPages = [
     {
-      title: 'Home',
+      title: 'Search Route Number',
       url: '/home',
-      icon: 'home'
+      icon: 'search'
     },
     {
-      title: 'List',
-      url: '/list',
-      icon: 'list'
+      title: 'Route Number Details',
+      url: '/route-number',
+      icon: 'information-circle'
+    },
+    {
+      title:'Current Place to Destination',
+      url:'/cptodest',
+      icon:'pin'
+    },
+    {
+      title:'Buses in Current Place',
+      url:'/busincp',
+      icon:'bus'
     }
+    // ,
+    // {
+    //   title:'Search Route Result',
+    //   url:'/srr-host',
+    //   icon:'list-box'
+    // }
+
   ];
 
   constructor(

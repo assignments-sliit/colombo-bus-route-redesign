@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Buses in Current Place
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <br />
+  <ion-input id="startValue" [(ngModel)]="start" (ionChange)="startChanged()" clearUnput=true placeholder="Start"
+    [hidden]=true>
+  </ion-input>
+
+  <ion-title *ngIf="resultView">
+    Available Buses at {{place}}
+  </ion-title>
+
+
+  <div *ngIf="resultView">
+    <ion-card expand="block" *ngFor="let result of searchResults">
+
+      <ion-grid>
+        <ion-row>
+          <ion-col float-left>
+            <div>
+              <ion-card-title float-left>
+                {{result.routeNumber}}
+              </ion-card-title>
+              <br />
+              <br />
+              <ion-card-subtitle float-left>
+                {{result.routeName}}
+              </ion-card-subtitle>
+            </div>
+          </ion-col>
+
+          <ion-col float-right>
+            <div>
+              <ion-button icon-start float-right large (click)="load(result)">
+                <ion-icon name="information-circle" padding-right></ion-icon>
+                &nbsp; More Info
+              </ion-button>
+            </div>
+          </ion-col>
+
+        </ion-row>
+      </ion-grid>
+
+
+
+    </ion-card>
+  </div>
+
+
+
+</ion-content>

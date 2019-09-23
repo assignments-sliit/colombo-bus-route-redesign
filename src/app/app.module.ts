@@ -8,6 +8,10 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import {GoogleMaps} from '@ionic-native/google-maps';
+//import {SpinnerDialog} from '@ionic-native/spinner-dialog/index';
+import {ConnectivityServiceService} from './connectivity-service.service'
+import { NativeGeocoder } from '@ionic-native/native-geocoder/ngx';
 
 @NgModule({
   declarations: [AppComponent],
@@ -18,8 +22,12 @@ import { AppRoutingModule } from './app-routing.module';
     AppRoutingModule
   ],
   providers: [
+    ConnectivityServiceService,
     StatusBar,
     SplashScreen,
+    GoogleMaps,
+    NativeGeocoder,
+    // SpinnerDialog,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

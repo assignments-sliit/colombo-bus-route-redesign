@@ -1,5 +1,7 @@
 {
   "name": "colomb-bus-route",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

@@ -1,0 +1,24 @@
+  <ion-header>
+      <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/home"> </ion-back-button>
+        </ion-buttons>
+     <ion-title>Route Number - {{data.routeNumber}}</ion-title>
+      </ion-toolbar>
+  </ion-header>
+
+
+  <ion-content>
+  <ion-tabs color="primary">
+     <ion-tab-bar slot="top">
+       <ion-tab-button tab="text" translucent>
+        <ion-label>TEXT</ion-label>
+       </ion-tab-button>
+      
+       <ion-tab-button tab="map" (click)="passData()">
+         <ion-label>MAP</ion-label>
+       </ion-tab-button>
+      </ion-tab-bar> 
+      
+  </ion-tabs>
+</ion-content>
