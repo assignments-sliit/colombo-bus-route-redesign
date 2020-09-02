@@ -1,4 +1,4 @@
-# Cplombo Bus Route - Redesign
+# Colombo Bus Route - Redesign
 
 [Ionic Framework](https://ionicframework.com/) is the open-source mobile app development framework that makes it easy to
 build top quality native and progressive web apps with web technologies.
